@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="src/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0f2aaab88e.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">My Shopping List</h1>
+      <button class="header__refresh">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+    </header>
+    <main>
+      <form class="shopping__form">
+        <input
+          class="shopping__input"
+          type="text"
+          placeholder="항목을 입력하세요" />
+        <button class="shopping__add" type="button">
+          <i class="fa-solid fa-plus add__icon"></i>
+        </button>
+      </form>
+      <ul class="shopping__list">
+        <li class="item">
+          <span class="item__name">milk</span>
+          <button class="item__delete">
+            <i class="fa-solid fa-trash delete__icon"></i>
+          </button>
+        </li>
+        <li class="item">
+          <span class="item__name">milk</span>
+          <button class="item__delete">
+            <i class="fa-solid fa-trash delete__icon"></i>
+          </button>
+        </li>
+        <li class="item">
+          <span class="item__name">milk</span>
+          <button class="item__delete">
+            <i class="fa-solid fa-trash delete__icon"></i>
+          </button>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
