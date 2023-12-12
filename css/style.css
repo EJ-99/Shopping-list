@@ -5,10 +5,11 @@
   --color-white: #ffffff;
   --color-black: #231f20;
   --color-pink: #ff94f2;
+  --animation-duration: 200ms;
 }
 
 * {
-  color: black;
+  color: var(--color-black);
   box-sizing: border-box;
 }
 
@@ -41,6 +42,7 @@ main {
   padding: 32px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   border-bottom: solid 3px black;
 }
 .header__title {
@@ -55,14 +57,14 @@ main {
   border-radius: 50%;
   font-size: 24px;
   text-align: center;
-  transition: transform 200ms ease-in;
+  transition: transform var(--animation-duration) ease-in;
 }
 .header__refresh:hover {
   transform: scale(1.1) rotate(360deg);
 }
 
 /* Form */
-.shopping__form {
+.add-form {
   background-color: var(--color-white);
   border: solid 3px var(--color-black);
   display: flex;
@@ -72,30 +74,30 @@ main {
   margin: auto;
 }
 
-.shopping__input {
+.add-form__input {
   width: 90%;
   background-color: transparent;
   border: none;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
-.shopping__add {
+.add-form__button {
   width: 10%;
   height: 100%;
   font-size: 20px;
   border-left: solid 3px black;
   font-weight: bold;
   background-color: var(--color-yellow);
-  transition: background-color 200ms ease-in;
+  transition: background-color var(--animation-duration) ease-in;
 }
 
-.shopping__add:hover {
+.add-form__button:hover {
   background-color: var(--color-blue);
 }
 
-.add__icon {
+.icon-add {
   background-color: var(--color-pink);
   border: solid 3px black;
   padding: 4px;
@@ -105,7 +107,7 @@ main {
 }
 
 /* list */
-.shopping__list {
+.items {
   background-color: var(--color-yellow);
   width: 700px;
   margin: auto;
@@ -118,7 +120,7 @@ main {
   display: flex;
   align-items: center;
   height: 50px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   border-bottom: solid 3px var(--color-black);
 }
@@ -126,6 +128,7 @@ main {
   width: 90%;
   text-align: center;
 }
+
 .item__delete {
   width: 10%;
   height: 100%;
@@ -133,14 +136,14 @@ main {
   border-left: solid 3px black;
   font-weight: bold;
   background-color: var(--color-blue);
-  transition: background-color 200ms ease-in;
+  transition: background-color var(--animation-duration) ease-in;
 }
 
 .item__delete:hover {
   background-color: var(--color-pink);
 }
 
-.delete__icon {
+.icon-delete {
   background-color: var(--color-yellow);
   border: solid 3px black;
   padding: 4px;
@@ -151,28 +154,46 @@ main {
 
 @media screen and (max-width: 768px) {
   .header__title {
-    font-size: 32px;
+    font-size: 28px;
   }
-  .shopping__form {
+  .header__refresh {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .add-form {
     width: 100%;
+    height: 40px;
   }
-  .shopping__input {
-    font-size: 20px;
-  }
-  .add__icon {
+  .add-form__input {
     font-size: 16px;
-    width: 30px;
-    height: 30px;
+    width: 80%;
   }
-  .shopping__list {
+  .add-form__button {
+    width: 20%;
+  }
+  .icon-add {
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .items {
     width: 100%;
   }
   .item {
-    font-size: 20px;
-  }
-  .delete__icon {
     font-size: 16px;
-    width: 30px;
-    height: 30px;
+    height: 40px;
+  }
+  .item__name {
+    width: 80%;
+  }
+  .item__delete {
+    width: 20%;
+  }
+  .icon-delete {
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
   }
 }

@@ -18,35 +18,18 @@
       </button>
     </header>
     <main>
-      <form class="shopping__form">
+      <form class="add-form">
         <input
-          class="shopping__input"
+          maxlength="50"
+          class="add-form__input"
+          name="itemname"
           type="text"
           placeholder="항목을 입력하세요" />
-        <button class="shopping__add" type="button">
-          <i class="fa-solid fa-plus add__icon"></i>
+        <button class="add-form__button">
+          <i class="fa-solid fa-plus icon-add"></i>
         </button>
       </form>
-      <ul class="shopping__list">
-        <li class="item">
-          <span class="item__name">milk</span>
-          <button class="item__delete">
-            <i class="fa-solid fa-trash delete__icon"></i>
-          </button>
-        </li>
-        <li class="item">
-          <span class="item__name">milk</span>
-          <button class="item__delete">
-            <i class="fa-solid fa-trash delete__icon"></i>
-          </button>
-        </li>
-        <li class="item">
-          <span class="item__name">milk</span>
-          <button class="item__delete">
-            <i class="fa-solid fa-trash delete__icon"></i>
-          </button>
-        </li>
-      </ul>
+      <ul class="items"></ul>
     </main>
   </body>
 </html>
